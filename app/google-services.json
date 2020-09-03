@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "801057399090",
+    "firebase_url": "https://chatapp-48aea.firebaseio.com",
+    "project_id": "chatapp-48aea",
+    "storage_bucket": "chatapp-48aea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801057399090:android:21a3b07cf5e72d4309b72b",
+        "android_client_info": {
+          "package_name": "com.rohit.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801057399090-vcjrmvgo7p6r64h8e4g9vfd093maurrq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFsGSAOMHnCo08bFoVdXf_8tNexUzTAco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801057399090-vcjrmvgo7p6r64h8e4g9vfd093maurrq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

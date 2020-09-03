@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ChatApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="display_name">Display Name</string>
+    <string name="status_herec">Status herec</string>
+    <string name="update">Update</string>
+    <string name="set_status">Set Status</string>
+
+</resources>
