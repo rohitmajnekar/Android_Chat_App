@@ -1,5 +1,6 @@
 package com.rohit.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.util.Log.d
@@ -62,9 +63,9 @@ class FragmentOne : Fragment() {
 
                         override fun onDataChange(p0: DataSnapshot) {
                             val uname = p0.getValue(User::class.java)
-                            val name = uname?.Name.toString()
-                            d("chatscreen", "${name}")
-                            adapter.add(LatestMessage(name,text))
+
+//                            d("chatscreen", "${name}")
+                            adapter.add(LatestMessage(uname!!,text))
                         }
 
                     })
@@ -73,16 +74,23 @@ class FragmentOne : Fragment() {
 
         })
         recyler_fragment_one.adapter = adapter
+        adapter.setOnItemClickListener{item, view->
+            val toUser  = item as LatestMessage
+            d("ActivityAllUser", "current user = $item")
+            val intent = Intent(view.context, ActivityChatScreen::class.java)
+            intent.putExtra("getYourShitDone",toUser.user)
+            startActivity(intent)
+        }
     }
 }
 
-class LatestMessage(val name : String, val text: String): Item<ViewHolder>(){
+class LatestMessage(val user : User, val text: String): Item<ViewHolder>(){
     override fun getLayout(): Int {
         return R.layout.new_chats_message
     }
 
     override fun bind(viewHolder: ViewHolder, position: Int) {
-        viewHolder.itemView.main_display_name.text = name
+        viewHolder.itemView.main_display_name.text = user.Name
         viewHolder.itemView.main_display_latest_message.text = text
     }
 
